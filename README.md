@@ -94,7 +94,9 @@ All casino emails followed:
 - multiple HTTP 302 redirects  
 - tracking parameters (e.g. `xcd`)  
 - affiliate routing  
-- final landing page delivery (see chain screenshots)  
+- final landing page delivery (see chain screenshots)
+
+The consistency of redirect patterns across different email themes suggests centralised infrastructure rather than independent campaigns
 
 ---
 
@@ -237,7 +239,7 @@ These reports include:
 - evidence of coordinated activity  
 - redirect behaviour and monetisation flow  
 
-Disrupting these domains would likely impact the campaign’s effectiveness, although similar infrastructure could be re-established.
+Disrupting these domains would likely impact this observed campaign infrastructure, although similar campaigns often re-establish quickly using new domains
 
 ---
 
