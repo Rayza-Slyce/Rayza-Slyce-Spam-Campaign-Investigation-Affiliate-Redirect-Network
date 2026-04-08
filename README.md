@@ -232,7 +232,7 @@ Abuse reports have been submitted to the relevant registrars:
 
 - GoDaddy (abuse@godaddy.com)  
 - Namecheap (abuse@namecheap.com)  
-- Spaceship  
+- Spaceship (abuse@spaceship.com)
 
 These reports include:
 
