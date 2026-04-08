@@ -1,5 +1,9 @@
 # Spam Campaign Investigation: Affiliate Redirect Network
 
+A hands-on investigation into a coordinated spam campaign, uncovering shared infrastructure, redirect behaviour, and affiliate monetisation techniques.
+
+---
+
 ## Executive Summary
 
 This investigation began with a small set of spam emails and developed into a broader analysis of a structured affiliate-driven spam campaign.
@@ -41,7 +45,7 @@ Notable patterns:
 
 ## Email Analysis
 
-### Casino Email Example
+### Casino Email Examples
 
 ![Casino Email 1](01_casino_1_eml.png)
 
@@ -75,9 +79,76 @@ Characteristics:
 
 ---
 
-## Infrastructure Analysis
+## Redirect & Behaviour Analysis
 
-WHOIS and registrant data revealed shared ownership and patterns across domains.
+### Casino Chains
+
+![Casino Chain 1](18_casino_1_landing_page_and_clean_chain.png)
+
+![Casino Chain 2](19_casino_2_landing_page_and_clean_chain.png)
+
+![Casino Chain 3](20_casino_3_landing_page_and_clean_chain.png)
+
+All casino emails followed:
+
+- multiple HTTP 302 redirects  
+- tracking parameters (e.g. `xcd`)  
+- affiliate routing  
+- final landing page delivery (see chain screenshots)  
+
+---
+
+### Antivirus Chains
+
+![Antivirus Chain 1 - Broken](15_antivirus_1_landing_page_and_broken_chain.png)
+
+![Antivirus Chain 2](16_antivirus_2_landing_page_and_clean_chain.png)
+
+![Antivirus Chain 3](17_antivirus_3_landing_page_and_clean_chain.png)
+
+Observations:
+
+- Antivirus 1 (March sample) chain is no longer functional  
+- Antivirus 2 & 3 follow full redirect paths  
+- same redirect structure as casino emails  
+- same monetisation pattern  
+
+---
+
+### Behaviour Summary
+
+Across all working chains:
+
+- Microsoft Safelinks used as initial redirect  
+- Google APIs used for content hosting / obfuscation  
+- multiple intermediary redirect domains  
+- affiliate tracking platforms (afftracko / revenueplayers)  
+- final landing pages on legitimate services  
+
+---
+
+## Monetisation Flow
+
+![Monetisation Flow](21_monetisation_flow.png)
+
+The flow is consistent:
+
+Email  
+→ Safelinks redirect  
+→ Google-hosted payload  
+→ redirect network  
+→ affiliate tracking  
+→ legitimate landing page  
+
+This structure allows:
+
+- tracking of user interactions  
+- attribution to affiliates  
+- revenue generation per conversion  
+
+---
+
+## Infrastructure Analysis
 
 ### alessandronannini.com
 
@@ -129,76 +200,7 @@ The Maltego graph shows:
 - links between domains and registrants  
 - registrar usage across providers (GoDaddy, Namecheap, Spaceship)  
 
-This confirms the emails are not isolated spam, but part of a coordinated system.
-
----
-
-## Redirect & Monetisation Behaviour
-
-### Casino Chains
-
-![Casino Chain 1](18_casino_1_landing_page_and_clean_chain.png)
-
-![Casino Chain 2](19_casino_2_landing_page_and_clean_chain.png)
-
-![Casino Chain 3](20_casino_3_landing_page_and_clean_chain.png)
-
-All casino emails followed:
-
-- multiple HTTP 302 redirects  
-- tracking parameters (e.g. `xcd`)  
-- affiliate routing  
-- final landing page delivery  
-
----
-
-### Antivirus Chains
-
-![Antivirus Chain 1 - Broken](15_antivirus_1_landing_page_and_broken_chain.png)
-
-![Antivirus Chain 2](16_antivirus_2_landing_page_and_clean_chain.png)
-
-![Antivirus Chain 3](17_antivirus_3_landing_page_and_clean_chain.png)
-
-Observations:
-
-- Antivirus 1 (March sample) chain is no longer functional  
-- Antivirus 2 & 3 follow full redirect paths  
-- same redirect structure as casino emails  
-- same monetisation pattern  
-
----
-
-### Behaviour Summary
-
-Across all working chains:
-
-- Microsoft Safelinks used as initial redirect  
-- Google APIs used for content hosting / obfuscation  
-- multiple intermediary redirect domains  
-- affiliate tracking platforms (afftracko / revenueplayers)  
-- final landing pages on legitimate services  
-
----
-
-## Monetisation Flow
-
-![Monetisation Flow](21_monetisation_flow.png)
-
-The flow is consistent:
-
-Email  
-→ Safelinks redirect  
-→ Google-hosted payload  
-→ redirect network  
-→ affiliate tracking  
-→ legitimate landing page  
-
-This structure allows:
-
-- tracking of user interactions  
-- attribution to affiliates  
-- revenue generation per conversion  
+This confirms the emails are part of a coordinated system rather than isolated spam.
 
 ---
 
