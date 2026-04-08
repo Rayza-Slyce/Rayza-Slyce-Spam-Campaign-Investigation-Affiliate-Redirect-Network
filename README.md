@@ -58,7 +58,8 @@ Characteristics:
 - incentive-based messaging (free spins, bonuses)  
 - simple HTML structure  
 - embedded redirect links  
-- consistent sender infrastructure  
+- consistent sender infrastructure
+- some embedded images displayed “content not viewable in your region”, likely used as a lightweight filtering or evasion technique, while underlying links remained fully functional 
 
 ---
 
