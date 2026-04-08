@@ -8,7 +8,7 @@ A hands-on investigation into a coordinated spam campaign, uncovering shared inf
 
 This investigation began with a small set of spam emails and developed into a broader analysis of a structured affiliate-driven spam campaign.
 
-Multiple themed emails (casino, antivirus, health) were found to share infrastructure, including:
+Different themed emails (casino, antivirus, health) were found to act as entry points into the same underlying infrastructure, including:
 
 - common sending domains  
 - shared reply-to domains  
@@ -120,7 +120,7 @@ Observations:
 
 ### Behaviour Summary
 
-Across all working chains:
+Across all tested links, the redirect behaviour remained consistent regardless of email theme, reinforcing the presence of a shared backend system rather than isolated campaigns.
 
 - Microsoft Safelinks used as initial redirect  
 - Google APIs used for content hosting / obfuscation  
@@ -240,7 +240,7 @@ These reports include:
 - evidence of coordinated activity  
 - redirect behaviour and monetisation flow  
 
-Disrupting these domains would likely impact this observed campaign infrastructure, although similar campaigns often re-establish quickly using new domains
+Disrupting these domains would likely impact the campaign’s current infrastructure, although similar patterns suggest it could be replicated or replaced.
 
 ---
 
